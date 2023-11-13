@@ -12,7 +12,8 @@ COLUMNS = [
     'sub_category',
     'region',
     'price',
-    'is_min_price'
+    'is_min_price',
+    'is_hidden'
 ]
  
 def lambda_handler(event, context):
