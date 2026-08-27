@@ -6,13 +6,25 @@ A Laravel-based backend API server.
 
 ### Install Dependencies
 
+Generate the `vendor/` directory with all required dependencies:
+
 ```bash
 composer install
 ```
 
+Or run the full setup (install, env setup, and migrations):
+
+```bash
+composer setup
+```
+
 ### Configuration
 
-Copy `.env.example` to `.env` and configure your environment variables (database, app key, etc.).
+Create `.env` from `.env.example` and configure your environment variables (database, app key, etc.):
+
+```bash
+cp .env.example .env
+```
 
 ### Generate Application Key
 
