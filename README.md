@@ -38,32 +38,6 @@ Or run the full setup (install, env setup, and migrations):
 composer setup
 ```
 
-### Configuration
-
-Create `.env` from `.env.example` and configure your environment variables (database, app key, etc.):
-
-```bash
-cp .env.example .env
-```
-
-### Generate Application Key
-
-```bash
-php artisan key:generate
-```
-
-### Run Migrations
-
-```bash
-php artisan migrate
-```
-
-### Start the Development Server
-
-```bash
-php artisan serve
-```
-
 ### API Endpoints
 
 - `GET /api/hello` — Returns a hello message (JSON response)
