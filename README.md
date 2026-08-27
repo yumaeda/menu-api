@@ -1,31 +1,45 @@
 # menu-api
-Repository for AWS Lambda-based menu API
 
-## Deployment
-### Deploy Lambda
+A Laravel-based backend API server.
+
+## Getting Started
+
+### Install Dependencies
+
 ```bash
-cd xxx_xxx && ./deploy.sh
+composer install
 ```
 
-&nbsp;
+### Configuration
 
-## Misc
-### Create Lambda Function
+Copy `.env.example` to `.env` and configure your environment variables (database, app key, etc.).
+
+### Generate Application Key
+
 ```bash
-aws lambda create-function \
-    --function-name <FUNCTION_NAME> \
-    --runtime python3.8 \
-    --zip-file fileb://<ZIP_NAME> \
-    --handler lambda_function.lambda_handler \
-    --role arn:aws:iam::xxxxxxxxxxxx:role/lambda-vpc-role \
-    --vpc-config SubnetIds=subnet-xxxxxxxxxxxxxxxxx,subnet-yyyyyyyyyyyyyyyyy,SecurityGroupIds=sg-xxxxxxxxxxxxxxxxx
+php artisan key:generate
 ```
 
-&nbsp;
+### Run Migrations
 
-### Remove Lambda Function
 ```bash
-aws lambda delete-function --function-name <FUNCTION_NAME>
+php artisan migrate
 ```
 
+### Start the Development Server
 
+```bash
+php artisan serve
+```
+
+### API Endpoints
+
+- `GET /api/hello` — Returns a hello message (JSON response)
+
+## Development
+
+### Run Tests
+
+```bash
+./vendor/bin/phpunit
+```
